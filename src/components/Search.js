@@ -2,10 +2,12 @@ import { useState } from "react";
 import "./Search.css";
 const Search = (props) => {
   const [name, setName] = useState("");
+
   const catArr = props.catArr;
 
   const handleSearch = (e) => {
     e.preventDefault();
+
     catArr.map((cat) => {
       if (name.toLowerCase() === cat.name.toLowerCase()) {
         props.setFeaturedCat(cat);
