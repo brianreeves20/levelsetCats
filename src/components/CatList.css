@@ -1,0 +1,8 @@
+.cat {
+  margin: 5px;
+  border: solid 1px black;
+}
+.catList {
+  grid-column: 1;
+  grid-row: 3;
+}
