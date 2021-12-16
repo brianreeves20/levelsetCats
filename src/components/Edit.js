@@ -11,7 +11,6 @@ const Edit = (props) => {
   const handleEdit = (e) => {
     e.preventDefault();
     props.setOpen(false);
-
     if (name) {
       featuredCat.name = name;
 
@@ -30,6 +29,7 @@ const Edit = (props) => {
       props.setFeaturedResult(featuredCat);
     }
   };
+
   return (
     <div className="editBox">
       <form onSubmit={handleEdit}>

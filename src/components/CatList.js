@@ -1,10 +1,12 @@
 import "./CatList.css";
+import Search from "./Search";
 
 const CatList = (props) => {
   const catArr = props.list;
 
   return (
     <div className="catList">
+      <Search catArr={catArr} setFeaturedCat={props.setFeaturedResult} />
       {catArr && (
         <aside>
           {catArr.map((cat, i) => {
@@ -15,7 +17,7 @@ const CatList = (props) => {
                 onClick={(e) => {
                   e.preventDefault();
 
-                  cat.views_count++;
+                  cat.views_couent++;
                   props.setFeaturedResult(cat);
                 }}
               >

@@ -89,6 +89,8 @@ function App() {
         handleClick={handleClick}
       />
       <FeaturedCat
+        list={list}
+        setList={setList}
         setFeaturedResult={setFeaturedResult}
         featuredResult={featuredResult}
         handleDelete={handleDelete}

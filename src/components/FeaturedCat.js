@@ -13,7 +13,6 @@ const FeaturedCat = (props) => {
         <Edit
           featuredCat={featuredCat}
           setFeaturedResult={setFeaturedResult}
-          open={open}
           setOpen={setOpen}
         />
       )}
@@ -24,6 +23,7 @@ const FeaturedCat = (props) => {
           <h2>{featuredCat.birthdate}</h2>
           <h2>{featuredCat.owner_name}</h2>
           <h3>{featuredCat.views_count}</h3>
+
           <button onClick={props.handleDelete}>Delete</button>
           <button
             onClick={() => {
