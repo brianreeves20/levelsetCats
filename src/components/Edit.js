@@ -31,46 +31,48 @@ const Edit = (props) => {
   };
 
   return (
-    <div className="editBox">
-      <form onSubmit={handleEdit}>
-        <input
-          placeholder="Cat's Name"
-          value={name}
+    <form className="editBox" onSubmit={handleEdit}>
+      <input
+        placeholder="Cat's Name"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <br />
+      <input
+        type="date"
+        value={birthdate}
+        onChange={(e) => {
+          setBirthdate(e.target.value);
+        }}
+      />
+      <br />
+      <input
+        placeholder="Cat's Picture URL"
+        value={picture}
+        onChange={(e) => {
+          setPicture(e.target.value);
+        }}
+      />
+      <br />
+      <label>
+        Select Owner:
+        <select
+          value={owner}
           onChange={(e) => {
-            setName(e.target.value);
+            setOwner(e.target.value);
           }}
-        />
-        <input
-          type="date"
-          value={birthdate}
-          onChange={(e) => {
-            setBirthdate(e.target.value);
-          }}
-        />
-        <input
-          placeholder="Cat's Picture URL"
-          value={picture}
-          onChange={(e) => {
-            setPicture(e.target.value);
-          }}
-        />
-        <label>
-          Select Owner:
-          <select
-            value={owner}
-            onChange={(e) => {
-              setOwner(e.target.value);
-            }}
-          >
-            <option value={null}></option>
-            <option value="John Doe">John Doe</option>
-            <option value="Jane Doe">Jane Doe</option>
-            <option value="Kate Debarros">Kate Debarros</option>
-          </select>
-        </label>
-        <button>Make Changes</button>
-      </form>
-    </div>
+        >
+          <option value={null}></option>
+          <option value="John Doe">John Doe</option>
+          <option value="Jane Doe">Jane Doe</option>
+          <option value="Kate Debarros">Kate Debarros</option>
+        </select>
+      </label>
+      <br />
+      <button>Make Changes</button>
+    </form>
   );
 };
 

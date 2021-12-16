@@ -29,7 +29,9 @@ const CatList = (props) => {
         </aside>
       )}
       {!catArr && (
-        <button onClick={props.handleClick}>Click to View All Cool Cats</button>
+        <button className="viewAll" onClick={props.handleClick}>
+          Click to View All Cool Cats
+        </button>
       )}
     </div>
   );

@@ -12,3 +12,8 @@
   max-height: 300px;
   border-radius: 50%;
 }
+button {
+  background-color: aqua;
+  border-radius: 45%;
+  margin: 5px;
+}

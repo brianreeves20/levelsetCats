@@ -6,3 +6,11 @@
   grid-column: 1;
   grid-row: 3;
 }
+.viewAll {
+  margin-left: 75px;
+  margin-top: 25px;
+  height: 75px;
+  background-color: aqua;
+  border-radius: 50%;
+  font-weight: bold;
+}

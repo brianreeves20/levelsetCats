@@ -1,3 +1,7 @@
 .editBox {
   border: solid 1px black;
+  display: block;
+}
+label {
+  margin-right: 144px;
 }
